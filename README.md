@@ -1,3 +1,3 @@
-# Payload-Type Driven API's
+# Svryn - Payload-Type Driven API's
 
-API which listen for different for different types of payloads instead of API endpoints.
+This repository is a wrapper over the Node http module, which allows user to create web servers which are independent from `API endpoint based routing`. In theory, this means that routes will truly respond to the type of inputs given to them, rather than the response based on clustering over an API endpoint.
