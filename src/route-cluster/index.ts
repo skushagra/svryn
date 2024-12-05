@@ -1,6 +1,6 @@
 
 
-export class BaseRoute {
+export class Route {
 
     constructor(){}
 
@@ -12,6 +12,16 @@ export class BaseRoute {
 }
 
 
-export class RouteCluster {    
+export class RouteCluster {
+
+    private cluster: Route[];
+
+    constructor() {
+        this.cluster = [];
+    }
+
+    add(route: Route) {
+        this.cluster.push(route);
+    }
 
 }

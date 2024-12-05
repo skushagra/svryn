@@ -1,13 +1,23 @@
 import http from "http";
-import { BaseRoute, RouteCluster } from "./route-cluster";
+import { Route, RouteCluster } from "./route-cluster";
 
-class Server extends BaseRoute{
+class Server {
 
     private server: http.Server;
+    private getRoutes: {type: any, route: Route}[];
+    private postRoutes: Route[];
 
     constructor() {
-        super();
         this.server = http.createServer();
+        this.getRoutes = [];
+        this.postRoutes = [];
+    }
+
+    post(route: Route) {
+
+        type routePOSTParameterType = Parameters<typeof route.get>[0];
+        type routePOSTReturnType = ReturnType<typeof route.get>;
+
     }
 
 
