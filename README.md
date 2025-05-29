@@ -31,9 +31,9 @@ class StudentCluster implements RouteCluster {
 
 For example, lets take a classic API route `/api/v1/student`, we can group this route under the route cluster called `Student` which can have its own router functions. This will have not effect on the working of the http server but make your code more redable and maintainable, since the Route Cluster is independent of the Server class, it can be defined seperately and independently of the server.
 
-Since everything is so type focused, we will have auto API creation based on models/types defined by the user.
-
 ## Service Methods
 Svryn has two implementations for service methods, it has compatibility for express like service/controller functions but it also has custom implementation for the service layer.
 
-
+## Crazy Features (features that randomly come to my mind)
+1. Automatic CRUD API for model types.
+2. snake_case and camelCase ignorance in API payload
